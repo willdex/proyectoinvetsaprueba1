@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.grayhatcorp.invetsa.invetsa.Prueba"
+    tools:showIn="@layout/activity_prueba">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll_sincronizar"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_mensaje"
+                android:text="Lista de formularios sincronizados.."
+                android:textColor="#fff"
+                android:textSize="15sp"
+                android:background="@color/colorPrimary"
+                android:padding="15sp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_total"
+                android:text="Total:"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:padding="15sp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_sincronizados"
+                android:text="Sincronizados:"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:padding="15sp"
+                />
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lv_lista"
+                >
+
+            </ListView>
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:id="@+id/tv_detalle"
+            android:text="Nombre del archivo"
+            android:textColor="@color/lila"
+            android:padding="35sp"
+            />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            android:max="10"
+            android:progress="0"
+            android:padding="15sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:id="@+id/tv_proceso"
+            android:text=""
+            android:textColor="@color/lila"
+            android:layout_margin="5sp"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt_sincronizar"
+            android:text="Cargar los datos"
+            android:background="@drawable/bk_boton"
+            android:gravity="center"
+            android:padding="10sp"
+            android:textSize="25sp"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:layout_gravity="bottom"
+            />
+
+    </LinearLayout>
+
+
+</FrameLayout>
